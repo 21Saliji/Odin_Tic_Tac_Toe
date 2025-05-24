@@ -5,9 +5,9 @@
     grid-template-rows: repeat(3, 150px);
   }
 
-  #grid div {
+#grid div {
     display: flex;
-    color: transparent;
+    color: black; /* <-- Change this line */
     justify-content: center;
     align-items: center;
     font-size: 2rem;
