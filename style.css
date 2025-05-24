@@ -1,16 +1,38 @@
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(270deg, #3ec80b, #eedc4b, #fd095d, #15dbd4);
+    background-size: 800% 800%;
+    animation: AnimationName 30s ease infinite;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#main > * {
+    margin-bottom: 32px;
+}
+
+#main h1 {
+    font-size: 3rem;
+}
+
 #grid {
     display: grid;
-    grid-gap: 10px;
+    gap: 16px;
     grid-template-columns: repeat(3, 150px);
     grid-template-rows: repeat(3, 150px);
-  }
+    margin-bottom: 32px;
+}
 
-  #grid div {
+#grid div {
     display: flex;
-    color: transparent;
+    color: black;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
     background: lightgray;
     border: 2px solid black;
@@ -18,36 +40,41 @@
     height: 150px;
 }
 
-#main {
-    width: 100%;
-    height: 100vh;
+#controls {
+    margin: 24px 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 20px;
 }
 
-#main {
-    background: linear-gradient(270deg, #3ec80b, #eedc4b, #fd095d, #15dbd4);
-    background-size: 800% 800%;
-
-    -webkit-animation: AnimationName 30s ease infinite;
-    -moz-animation: AnimationName 30s ease infinite;
-    animation: AnimationName 30s ease infinite;;
-    padding: 20px;
-    border-radius: 10px;
-
+#controls button,
+#controls input[type="text"] {
+    font-size: 1.5rem;
+    padding: 16px 36px;
+    border-radius: 8px;
+    border: 2px solid #333;
 }
 
-@-webkit-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+#controls button {
+    background: #eedc4b;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
 }
-@-moz-keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+
+#controls button:hover {
+    background: #fd095d;
+    color: white;
 }
+
+#controls input[type="text"] {
+    width: 220px;
+}
+
+#message, #result {
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
 @keyframes AnimationName {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
